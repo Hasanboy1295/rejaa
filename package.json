@@ -14,7 +14,11 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "ijs": "^0.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
