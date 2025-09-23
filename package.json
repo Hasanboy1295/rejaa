@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    
-      "dev": "nodemon train.js",
+
+    "start": "node train.js",
+    "dev": "nodemon train.js",
+    "train": "node train.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

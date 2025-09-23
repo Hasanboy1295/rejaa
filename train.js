@@ -81,7 +81,12 @@ else { setInterval(function () {
 
      //TASK
 
-     function countLetter(word, letter) {
+    //  function countLetter(word, letter) {
+    //     return word.split("").filter(s  =>  s === letter).length;
+    //   }
+      
+    //   console.log(countLetter("scissor", "s")); 
+    function countLetter(word, letter) {
         return word.split("").filter(s  =>  s === letter).length;
       }
       
