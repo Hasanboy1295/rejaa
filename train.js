@@ -31,7 +31,7 @@ const list = [
     else if (a > 50 && a <= 60)  return list [4];
 else { setInterval(function () {
             callback(null, list[5]);
-      }, 1000);
+      }, 5000);
          //return new Promise ((resolve, reject) => {
         // setInterval(() =>{ //Timeout va Interval
         //     resolve(list[1]);
@@ -69,7 +69,6 @@ else { setInterval(function () {
     
 // }
 // run();
-
      console.log("passed here 0");
      maslahatBering(70, (err, data) => {
         if (err) console.log("ERROR:", err);
@@ -78,3 +77,12 @@ else { setInterval(function () {
         }
      });
      console.log("passed here 1")
+
+
+     //TASK
+
+     function countLetter(word, letter) {
+        return word.split("").filter(s  =>  s === letter).length;
+      }
+      
+      console.log(countLetter("scissor", "s")); 
