@@ -66,7 +66,7 @@ app.get("/", function (req, res) {
       res.end("something went wrong");
     } else {
       console.log(data);
-      res.render("Reja",  { items: data} ); 
+      res.render("reja",  { items: data} ); 
     } 
   });
 });

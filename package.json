@@ -1,10 +1,10 @@
 {
-  "name": "Reja",
+  "name": "reja",
   "version": "1.0.0",
   "description": "Bu bizning birinchi loyihamiz",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node train.js",
     "dev": "nodemon server.js",
     "train": "nodemon train.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,7 @@
     "express": "^4.17.3",
     "moment": "^2.30.1",
     "mongodb": "^3.2.6",
-    "sass": "^1.89.1"
+    "sass": "^1.89.1",
+    "nodemon": "^2.0.15"
   }
 }

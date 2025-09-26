@@ -94,3 +94,4 @@ else { setInterval(function () {
       }
       
       console.log(countLetter("scissor", "s")); 
+      
