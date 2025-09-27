@@ -53,11 +53,11 @@ app.post("/create-item", (req, res) => {
   //   console.log(req); //body
   // res.json({ test: "success" });
 });
-//app.get("/author", (req, res) => {
-  //res.render("author", { user: user });
-//});
+app.get("/author", (req, res) => {
+res.render("author");
+});
 
-app.get("/", function (req, res) {
+app.get("/", function (req, res) { // { user: user })
   db.collection("plans")
   .find()
   .toArray((err, data) => {
@@ -73,3 +73,4 @@ app.get("/", function (req, res) {
 
 
 module.exports = app;  
+
