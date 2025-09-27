@@ -103,7 +103,7 @@ margin-bottom: 29.46px;
     color: #1b1b1b;
 
 }
-/* .main_frame  .left_frame  .left_2-1 {
+.main_frame  .left_frame  .left_2-1 {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -115,7 +115,7 @@ margin-bottom: 29.46px;
         align-items: space-between;           
         margin: 10px;                  
       
-} */
+}
 /* .main_frame  .left_frame  .left_2-2 {
     position: relative;
     display: flex;
@@ -276,3 +276,4 @@ background-color: aqua;
     margin-left: 45px;
     background-color: aqua;  
 }
+.btn btn_danger

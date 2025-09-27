@@ -33,15 +33,30 @@
           </div>
         </form>
       </div>
+ <ul id="item-list" class="list-group pb-5">
+  <% items.map(function(item) { %>
+    <li 
+    class="list-group-item    list-group-item-info d-flex align-items-center justify-cotent-beetween"
+    >
+  <span class="item-text"><%= item.reja %></span>
+<div>
+  <button 
+   data-id="<%=item.id%>" 
+   class="delete_me btn btn-danger btn-sm" 
+   >
+    Ozgartrish
+  </button>
+  <button  data-id="<%=item.id%>" class="edit-me btn btn-secondary btn-sm mr-1">Ochrish </button>
 
-        <ul id="item-list" class="list-group pb-5">
-<li class="list-group-item list-group-item-info d-flex align-items-center  justify-content-between ">
-<span class="item-text"></span>
+</div>
 </li>
-        </ul>
-      <button id="clean_all" class="btn btn_danger" style="border-radius: 20px;">
- All  Plans Delate
+<% }) %>
+ </ul>
+        
+
+      <button id="clean_all" class="btn btn_danger" style="border-radius: 20px;  "  style="background-color: #6f7cdf ">
+ All  Plans Delate. 
       </button>
     </div>
-  </body>
+  </body>   
 </html>
