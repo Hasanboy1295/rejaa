@@ -54,7 +54,8 @@ app.post("/create-item", (req, res) => {
   // res.json({ test: "success" });
 });
 app.get("/author", (req, res) => {
-res.render("author");
+  const user = { name: "Albert", age:24};
+res.render("author", {user});
 });
 
 app.get("/", function (req, res) { // { user: user })
