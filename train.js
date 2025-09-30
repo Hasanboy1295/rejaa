@@ -1,3 +1,55 @@
+// TASK-C
+
+class dokon {
+  constructor (non, lagmon, cola) {
+    this.non = non
+    this.lagmon = lagmon 
+    this.cola =cola 
+  }
+  qoldiq()  { 
+    const time = new Date();
+    const soat = time.getHours();
+    const minute = time.getMinutes();
+
+    console.log(`hozir ${soat}:${minute}   ${this.non} ta non,   ${this.lagmon} ta lag'mon, ${this.cola}  ta cola mavjud`)
+  };
+ sotish(mahsulot, son) {
+  this[mahsulot] = this[mahsulot] - son 
+  
+ }
+   qabul( mahsulot, miqdori) {
+    this[mahsulot] = this[mahsulot] + miqdori
+   }
+}
+
+const shop = new dokon(4, 5, 7);
+shop.qoldiq();
+shop.sotish("non", 1 )
+shop.qoldiq();
+shop.sotish("lagmon", 2 )
+shop.qoldiq();
+shop.qabul("cola", 3)
+shop.qoldiq();
+// Shop nomli class tuzing, va bu class 3 xill parametr qabul qilsin.
+// Hamda classning quyidagdek 3'ta metodi bo'lsin:
+
+// 1) qoldiq
+// 2) sotish
+// 3) qabul
+
+// Har bir metod ishga tushgan vaqtda log qilinsin
+
+// MASALAN:
+// const shop = new Shop(4, 5, 2)
+
+// shop.qoldiq();
+// natija qaytishi kerak: Hozir 20: 40'da 4'ta non, 5'ta lag'mon va 2'ta cola mavjud
+
+// shop.sotish("non", 3); & shop.qabul("cola", 4); & shop.qoldiq();
+// Natija qaytishi kerak: Hozir 20:50da 1ta non, 5ta lag'mon va 6ta cola mavjud!
+
+
+
 // TASK B
 
 //const { text } = require("express");
@@ -7,14 +59,14 @@
 
 
 
-  function countDigits(dev) {
-    let div = dev.split("");
-    let digits = dev.filter(function(ele) {
-        return  ele >= "0" && ele <= "9";
-    });
-    return digits(countDigits("ad2a54y79wet0sfgb9"));
-  }
-  console.log
+  // function countDigits(dev) {
+  //   let div = dev.split("");
+  //   let digits = dev.filter(function(ele) {
+  //       return  ele >= "0" && ele <= "9";
+  //   });
+  //   return digits(countDigits("ad2a54y79wet0sfgb9"));
+  // }
+  // console.log
   // 4. Funksiyan
 // Masalan: countDigits("ad2a54y79wet0sfgb9")
 // Yuqoridagi string tarkibida 7 dona raqam qatnashganligi uchun, natija 7 qaytadi
