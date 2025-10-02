@@ -74,15 +74,9 @@ app.post("/edit-item", (req, res) => {
   res.end("done");
 });
 
-// app.post("/delete-all", (req, res) => {
-//   if(req.body.delete_all) {
-//     db.collection("plans").deleteMany(function() {
-//       req.json({state: "hamma rejalar ochirildi "});
-//     });
-//   }
-// });
 
-app.post("/delete-all", (req, res) => {
+
+ app.post("/delete-all", (req, res) => {
   if (req.body.delete_all) {
     db.collection("plans").deleteMany(function () {
       res.json({ state: "hamma rejalar o'chirildi" });

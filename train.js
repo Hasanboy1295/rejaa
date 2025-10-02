@@ -1,4 +1,31 @@
+// TASK D
 
+
+
+
+function barchasi(a, b) {
+  let sortedA = a.split(``).sort().join();
+  let sortedB = b.split(``).sort().join();
+  if (sortedA === sortedB)  {
+    return true;
+} else {
+    return false;
+  }
+
+}
+
+
+let natija = barchasi("mitgrop", "itgropm");
+console.log (natija);
+
+
+// Ikkita parametra ega function tuzing, va functioning
+// berilgan birinchi va ikkinchi parametr qiymatlari o'zaro to'liq
+// mos kelsa true qiymat qaytarsin
+
+// Masalan: checkContent("mitgroup", "gmtiprou");
+// Yuqoridagi misolda birinchi va ikkinchi parametr qiymatli bir xil
+// ya'ni bir xil harflar qatnashganligi uchun true qiymat qaytaradi
 
 
 
