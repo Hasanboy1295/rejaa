@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 //MongoDb
-const db =require("./server").db();
+const db = require("./server").db();
 
 
 const mongodb = require("mongodb");
@@ -54,16 +54,43 @@ app.post("/create-item", (req, res) => {
 app.post("/delete-item", (req, res) => {
 const id = req.body.id;
 db.collection("plans").deleteOne(
-  // {_id: new mongodb.ObjectId(id) },
+// {_id: new mongodb.ObjectId(id) },
 function(err, data) {
    res.json({state: "success"});
 }
 );
 });
-app.get("/author", (req, res) => {
-  const user = { name: "Albert", age:24};
-res.render("author", {user});
+
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  console.log(data);(
+//db.collection("plans").findOneAndUpdate
+  //{_id: new mongodb.ObjectId(data.id) }, 
+  {$set: {reja: data.new_input}},
+   function(err, data) {
+    res.json({state: "success"});
+   }
+  );
+  res.end("done");
 });
+
+// app.post("/delete-all", (req, res) => {
+//   if(req.body.delete_all) {
+//     db.collection("plans").deleteMany(function() {
+//       req.json({state: "hamma rejalar ochirildi "});
+//     });
+//   }
+// });
+
+app.post("/delete-all", (req, res) => {
+  if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({ state: "hamma rejalar o'chirildi" });
+    });
+  }
+});
+
+
 
 app.get("/", function (req, res) { // { user: user })
   console.log('user entered / ');
@@ -81,5 +108,11 @@ app.get("/", function (req, res) { // { user: user })
 });
 
 
-module.exports = app;  
+app.get("/author", (req, res) => {
+  const user = { name: "Albert", age:24};
+res.render("author", {user});
+});
+
+
+module.exports = app;
 

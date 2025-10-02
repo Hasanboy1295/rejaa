@@ -1,35 +1,42 @@
+
+
+
+
+
+
+
 // TASK-C
 
-class dokon {
-  constructor (non, lagmon, cola) {
-    this.non = non
-    this.lagmon = lagmon 
-    this.cola =cola 
-  }
-  qoldiq()  { 
-    const time = new Date();
-    const soat = time.getHours();
-    const minute = time.getMinutes();
+// class dokon {
+//   constructor (non, lagmon, cola) {
+//     this.non = non
+//     this.lagmon = lagmon 
+//     this.cola =cola 
+//   }
+//   qoldiq()  { 
+//     const time = new Date();
+//     const soat = time.getHours();
+//     const minute = time.getMinutes();
 
-    console.log(`hozir ${soat}:${minute}   ${this.non} ta non,   ${this.lagmon} ta lag'mon, ${this.cola}  ta cola mavjud`)
-  };
- sotish(mahsulot, son) {
-  this[mahsulot] = this[mahsulot] - son 
+//     console.log(`hozir ${soat}:${minute}   ${this.non} ta non,   ${this.lagmon} ta lag'mon, ${this.cola}  ta cola mavjud`)
+//   };
+//  sotish(mahsulot, son) {
+//   this[mahsulot] = this[mahsulot] - son 
   
- }
-   qabul( mahsulot, miqdori) {
-    this[mahsulot] = this[mahsulot] + miqdori
-   }
-}
+//  }
+//    qabul( mahsulot, miqdori) {
+//     this[mahsulot] = this[mahsulot] + miqdori
+//    }
+// }
 
-const shop = new dokon(4, 5, 7);
-shop.qoldiq();
-shop.sotish("non", 1 )
-shop.qoldiq();
-shop.sotish("lagmon", 2 )
-shop.qoldiq();
-shop.qabul("cola", 3)
-shop.qoldiq();
+// const shop = new dokon(4, 5, 7);
+// shop.qoldiq();
+// shop.sotish("non", 1 )
+// shop.qoldiq();
+// shop.sotish("lagmon", 2 )
+// shop.qoldiq();
+// shop.qabul("cola", 3)
+// shop.qoldiq();
 // Shop nomli class tuzing, va bu class 3 xill parametr qabul qilsin.
 // Hamda classning quyidagdek 3'ta metodi bo'lsin:
 

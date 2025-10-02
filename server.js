@@ -23,5 +23,3 @@ mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: tr
     }
 );
 
-
-

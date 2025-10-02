@@ -48,12 +48,37 @@ console.log(e.target)
       .catch((err) =>{
         console.log("Iltmos qaytadan h-t qilib koring");
       });
-
-  
     }
   }
-  //edit 
+
+  //edit oper
   if(e.target.classList.contains("edit-me")) {
-    alert("siz edit tugmasini bosdingiz");
+   let userInput = prompt(
+    "Yangi O'zgartrish kriying", 
+    e.target.parentElement.parentElement.querySelector(".item-text").innerHTML)
+    if(userInput) {
+      axios.post("/edit-item", {
+        id: e.target.getAttribute("data-id"),
+         new_input: userInput,
+    })
+    .then(response => {
+console.log(response.data);
+ e.target.parentElement.parentElement.querySelector(
+ ".item-text"
+ ).innerHTML = userInput
+    })
+    .catch(err => { 
+console.log("Iltmos Qaytadan h-t qiling!")
+    });
+     
+    }
   }
+});
+
+
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios.post("/delete-all", { delete_all: true }).then((response) => {
+    alert(response.data.state);
+    document.location.reload();
+  });
 });
